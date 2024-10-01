@@ -52,7 +52,7 @@ def initial_model(args):
         device_map="auto",
         trust_remote_code=True
     )
-    tokenizer = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained('unsloth/Llama-3.2-1B-Instruct', trust_remote_code=True)
     model.eval()
     return model, tokenizer
 
